@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<style>
+    label{
+        font-family: cursive;
+    }
+
+    #btn {
+        width: 120px;
+        background-color: gold;
+        color: white;
+    }
+
+    h2 {
+        color: gold;
+    }
+
+    label {
+        color: dimgray;
+    }
+    #navi{
+    background-color: black;
+    color: white;
+    
+}
+#con{
+    margin: 60px 200px;
+    background-color: azure;   
+}
+#width{
+    width: 60px;
+}
+#float{
+    float: right;
+    margin: 10px;
+}
+#footer{
+    
+    background-color: rgba(0, 0, 0, 0.849);
+    color: white;
+    padding: 10px; 
+    }
+    
+</style>
+
+<body>
+        <div id="navi">
+                <img src="image/olx.png" alt="" id="width"> Pakistan's Largest Marketplace
+        
+                <a href="pic.html"><input type="button" value="Submit an Ad" class="btn btn-success " id="float"> </a>
+                
+                    <input type="button" value="LogOut" class="btn btn-warning "  id="float" onclick="logOut()"> 
+        
+            </div>
+            <br>
+
+
+    <div class="container">
+        <h2>Post An Ad</h2>
+        <br>
+        <form class="form-horizontal" >
+
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email"> Select Category
+                    <span>*</span>
+                </label>
+                <div class="col-sm-4">
+
+
+                    <select class="form-control">
+                        <option>Select Category</option>
+                        <option>Mobiles</option>
+                        <option>Electronics and Appliances</option>
+                        <option>Cars</option>
+                        <option>Bikes</option>
+                        <option>Furniture</option>
+                        <option>Pets</option>
+                        <option>Books, Sports and hobbies</option>
+                        <option>Fashion</option>
+                        <option>Kids</option>
+                        <option>Services</option>
+                        <option>Real, Estate</option>
+                    </select>
+                </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+                    <label class="control-label col-sm-2" > Your Name
+                        <span>*</span>
+                    </label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control" id="adName" placeholder="Enter Name" name="email">
+                    </div>
+                </div>
+                <br>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email"> Ad Description
+                    <span>*</span>
+                </label>
+                <div class="col-sm-6">
+                    <textarea name="" id="adDescription" cols="77" rows="5" class="form-control" placeholder="write few lines about product"></textarea>
+                </div>
+            </div>
+            <br>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email"> Photos For Your Ad
+
+
+                    <span>*</span>
+                </label>
+                <div class="col-sm-6">
+                    <input type="file" id="fileButton" placeholder="" name="" >
+                </div>
+            </div>
+            <br>
+            
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email"> Model
+
+                    <span>*</span>
+                </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="adModel" placeholder="" name="email">
+                </div>
+            </div>
+            <br>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email"> Year
+                    <span>*</span>
+                </label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" id="adYear" placeholder="" name="email">
+                </div>
+            </div>
+            <br>
+            <div class="col-sm-9">
+                <input type="button" value="Post" class="btn pull-right" id="btn" onclick="adPost()">
+
+            </div>
+
+        </form>
+    </div>
+<br><br>
+
+    <div id="footer">
+            <div class="row copyrights">
+                <div class="col-md-4 col-sm-4 col-xs-4" id="cp-left">
+                    <p>Website Designed</p>
+                    <span> by</span>
+                    <p>
+                        <abbr title="Roll No. 15982">
+                            <a href="https://www.facebook.com/musman.ali.370" id="Usman" target="_blank" style="color:red;"></a> Muhammad Usman</a>
+                        </abbr>
+                    </p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4" id="">
+                    <p>&copy; Copyright 2018 All rights reserved, Olx.pk</p>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-4">
+                    <a href="#top">
+                        <span class="fa fa-angle-up"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyAl2qnDpYhqo5qoIRWIRM7R7iqTHIXEZ1k",
+            authDomain: "olx-15982.firebaseapp.com",
+            databaseURL: "https://olx-15982.firebaseio.com",
+            projectId: "olx-15982",
+            storageBucket: "olx-15982.appspot.com",
+            messagingSenderId: "145455282000"
+          };
+          firebase.initializeApp(config);
+        </script>
+
+
+
+<script src="script/adpost.js"></script>
+<script src="script/res.js"></script>
+</body>
+
+</html>

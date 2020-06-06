@@ -1,0 +1,57 @@
+
+
+ #width{
+    width: 60px;
+}
+
+#navi{
+    background-color: black;
+    color: white;
+    
+}
+#con{
+    margin: 60px 200px;
+    background-color: azure;
+    
+  
+    
+}
+.pad{
+    padding-top: 20px;
+}
+.pa{
+    padding-top: 5px; 
+}
+ #box{
+    box-shadow:  5px 5px 5px #777777;
+    padding: 10px;
+    margin: 10px;
+    background-color: white;
+    
+    min-width: 100px;
+
+} 
+ #box:hover{
+    background-color: rgba(0, 128, 96, 0.589);
+    
+}
+a{
+    color: black;
+    
+
+} 
+
+#footer{
+    
+background-color: rgba(0, 0, 0, 0.849);
+color: white;
+padding: 10px; 
+}
+h3{
+    padding-top: 100px;
+}
+input{
+    float: right;
+    margin: 10px;
+    
+}

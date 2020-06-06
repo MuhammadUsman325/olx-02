@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+    #login{
+    font-family: Courier New, Courier, monospace;
+    background-color: blanchedalmond;
+    box-shadow:   10px 10px 10px #777777;
+    
+    padding: 40px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 400px;
+    /* min-width: 100px; */
+
+}
+label{
+    float: left;
+}
+
+input{
+
+    text-indent: 15px;  
+}
+h1{
+    width: 260px; 
+    
+}
+button{
+    width: 260px;
+    margin: 10px; 
+}
+</style>
+    <body class="bg-success">
+        <center>
+            <div class="container-fluid" id="login">
+           <h1 class="text-success">Login:</h1><br>
+                   <div class="col-sm-14"> 
+                       
+        <div class="text-center alert-danger" id="error"></div>
+
+                       <input type="email" placeholder="Email" id="userEmail" class="form-control"><br><br>
+                    <input type="password" placeholder="Password" id="userPassword" class="form-control"><br><br>
+                 <input type="button" value="Login"  class="form-control btn-danger" onclick="logIn()" >
+            
+                   </div>
+                </div>
+            </center>
+            
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAl2qnDpYhqo5qoIRWIRM7R7iqTHIXEZ1k",
+        authDomain: "olx-15982.firebaseapp.com",
+        databaseURL: "https://olx-15982.firebaseio.com",
+        projectId: "olx-15982",
+        storageBucket: "olx-15982.appspot.com",
+        messagingSenderId: "145455282000"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="script/res.js"></script>
+           
+</body>
+</html>
